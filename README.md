@@ -4,6 +4,8 @@
 
  - Añadir paciente
  - Modificar paciente
+ - Borrar Paciente
+ - Concertar cita
  - Añadir citas
  - Ver historial médico pasado
 
