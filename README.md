@@ -8,6 +8,7 @@
  - Concertar cita
  - Añadir citas
  - Ver historial médico pasado
+ - Mostrar listado de usuarios
 
 ## Requisitos no funcionales
 
