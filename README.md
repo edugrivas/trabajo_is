@@ -9,6 +9,7 @@
  - Añadir citas
  - Ver historial médico pasado
  - Mostrar listado de usuarios
+ - Buscar paciente
 
 ## Requisitos no funcionales
 
