@@ -4,7 +4,9 @@
 # Descripción: El sistema permite añadir una nueva persona registrada como paciente.
 
 **Actores principales:** Secretaría.
+
 **Actores secundarios:** Pacientes.
+
  **Condiciones a cumplir:**
 
 El paciente debe como mínimo recibir una consulta para constar en el sistema.
