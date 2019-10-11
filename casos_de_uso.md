@@ -122,3 +122,37 @@ Los datos del usuario quedan borrados para siempre.
 
 Si hay algún tipo de fallo y se pierden los datos de un paciente , existe la posibilidad de volver a obtenerlos con una copia de seguridad.
 
+# Añadir cita
+**Opción 5**
+
+### Descripción: El sistema permite establecer un vinculo entre médico y paciente
+
+**Actores principales:** Secretaría
+
+**Actores secundarios:** Pacientes y médicos 
+
+**Condiciones a cumplir:**
+
+La persona que desea una cita debe solicitarla a secretaría.
+
+
+**Actividad principal:**
+En secretaría se busca en el sistema al paciente que necesita una cita con el médico.
+
+El sistema asigna a un médico al paciente en cuestión
+
+En el sistema se actualizará la información y saldrá una nueva fecha para la cita.
+
+Aparecerá un mensaje de exito.
+
+Los datos quedarán actualizados.
+
+**Condiciones que se cumplen:**
+
+Aparece la cita al buscar la información del paciente.
+
+**Recursos auxiliares**
+
+Si no hay médicos disponibles el paciente pasará a lista de espera y será notificado cuando se le asigne a un médico.
+
+En el sistema se actualizará la información y saldrá una nueva fecha para la cita.
