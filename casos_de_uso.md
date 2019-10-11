@@ -1,7 +1,7 @@
 ## Casos de uso
 # Añadir paciente
 **ID: 001**
-# Descripción: El sistema permite añadir una nueva persona registrada como paciente.
+### Descripción: El sistema permite añadir una nueva persona registrada como paciente.
 
 **Actores principales:** Secretaría.
 
