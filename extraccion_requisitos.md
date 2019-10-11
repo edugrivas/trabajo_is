@@ -14,13 +14,13 @@ Los secretarios y doctores necesitan que se almacenen los siguientes datos dentr
 ## Requisitos funcionales
 
   * La aplicación debe poder realizar las siguientes acciones para todos los usuarios:
-    ..* Añadir un paciente nuevo -
-    ..* Modificar los datos de un paciente -
-    ..* Eliminar a un paciente -
-    ..* Concertar una cita -
-    ..* Añadir una cita -
+    ..* Añadir un paciente nuevo
+    ..* Modificar los datos de un paciente
+    ..* Eliminar a un paciente
+    ..* Concertar una cita
+    ..* Añadir una cita
     ..* Ver historial médico pasado de un paciente
-    ..* Buscar un paciente -
+    ..* Buscar un paciente
   * Los pacientes serán buscados por Nombre y Apellidos.
   * La aplicación debe poder mostrar información sobre un paciente en concreto por pantalla.
   * La aplicación debe poder mostrar las citas de hoy con los siguientes campos:
