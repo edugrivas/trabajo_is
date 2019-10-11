@@ -14,7 +14,7 @@ No debe haber registros suyos previos.
 
  **Actividad principal:**
 
-Se pide al usuario los datos del paciente a introducir.
+Se pide al usuario los datos del paciente a introducir.\n
 Se compueba que no existe dicha persona en los registros.
 Se guarda la información.
 
