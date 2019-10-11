@@ -1,6 +1,6 @@
 ## Casos de uso
 # Añadir paciente
-**ID: 001**
+**Opción 1**
 ### Descripción: El sistema permite añadir una nueva persona registrada como paciente.
 
 **Actores principales:** Secretaría.
@@ -32,7 +32,7 @@ Su información será constante aunque podrá ser modificada más adelante.
 Si algunos de los campos introducidos a la hora de añadir al usuario son incorrectos, aparecerá el mensaje de error.
 
 # Búsqueda de paciente 
-**ID: 002**
+**Opción 2**
 
 ### Descripción: Nuestro sistema permite encontrar a la persona deseada a base de introducir alguno de sus datos
 
@@ -57,4 +57,35 @@ El sistema analiza y encuentra los datos buscados.
 **Recursos auxiliares**
 
 Si la persona en cuestión no se encuentra registrada en el sistema , aparece un mensaje de error.
+# Actualizar paciente
+**Opción 3**
+
+### Descripción: El sistema permite cambiar algunos datos de los pacientes
+
+**Actores principales:** Secretaría
+
+**Actores secundarios:** Pacientes a actualizar
+
+**Condiciones a cumplir:**
+
+La persona a buscar debe estar registrada en el sistema, de lo contrario dará error.
+
+El cambio que se desea hacer no debe interferir con el sistema ni con los parámetros a cambiar.
+
+**Actividad principal:**
+
+El usuario debe introducir el identificador de la persona a actualizar, acto seguido , deberá seleccionar el dato a cambiar y rellenarlo con la nueva información.
+
+Aparecerá un mensaje de exito.
+
+Los datos quedarán actualizados.
+
+**Condiciones que se cumplen:**
+
+El sistema tendrá actualizados los datos del paciente.
+
+**Recursos auxiliares**
+
+Si hay algún tipo de conflicto entre los datos o la nueva información no puede ser correcta dará error.
+
 
