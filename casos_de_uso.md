@@ -156,4 +156,33 @@ Aparece la cita al buscar la información del paciente.
 
 Si no hay médicos disponibles el paciente pasará a lista de espera y será notificado cuando se le asigne a un médico.
 
-En el sistema se actualizará la información y saldrá una nueva fecha para la cita.
+# Ver historial médico
+**Opción 6**
+
+### Descripción: El sistema permite ver la información de recetas y consultas anteriores del paciente
+**Actores principales:** Secretaría
+
+**Actores secundarios:** Información de las visitas del paciente
+
+**Condiciones a cumplir:**
+
+El paciente que es buscada debe haber tratado alguna cita o alguna receta en la consulta.
+
+La persona debe estar registrada en el sistema.
+
+
+**Actividad principal:**
+
+En secretaría se busca en el sistema al paciente.
+
+Selecciona su historial médico.
+
+El sistema muestra un listado de la actividad del paciente.
+
+**Condiciones que se cumplen:**
+
+No se modifica ningún dato del paciente.
+
+**Recursos auxiliares**
+
+Si no hay registro médico del paciente , aparecerá en blanco.
