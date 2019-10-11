@@ -137,6 +137,7 @@ La persona que desea una cita debe solicitarla a secretaría.
 
 
 **Actividad principal:**
+
 En secretaría se busca en el sistema al paciente que necesita una cita con el médico.
 
 El sistema asigna a un médico al paciente en cuestión
