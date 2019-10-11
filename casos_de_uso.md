@@ -88,4 +88,37 @@ El sistema tendrá actualizados los datos del paciente.
 
 Si hay algún tipo de conflicto entre los datos o la nueva información no puede ser correcta dará error.
 
+# Borrar paciente
+**Opción 4**
+
+### Descripción: El sistema permite borrar a un paciente si por cualquier circunstancia su información ya no será necesaria
+
+**Actores principales:** Secretaría
+
+**Actores secundarios:** Pacientes a borrar
+
+**Condiciones a cumplir:**
+
+La persona a buscar debe estar registrada en el sistema, de lo contrario dará error.
+
+
+**Actividad principal:**
+
+El usuario debe introducir el identificador del paciente a borrar del registro.
+
+Se pedirá confirmación del usuario.
+
+Se procede a borrar los datos del paciente.
+
+Aparecerá un mensaje de exito.
+
+Los datos quedarán actualizados y ya no aparecerá más el paciente en cuestión.
+
+**Condiciones que se cumplen:**
+
+Los datos del usuario quedan borrados para siempre.
+
+**Recursos auxiliares**
+
+Si hay algún tipo de fallo y se pierden los datos de un paciente , existe la posibilidad de volver a obtenerlos con una copia de seguridad.
 
