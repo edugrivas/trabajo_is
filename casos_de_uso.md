@@ -31,7 +31,7 @@ Su información será constante aunque podrá ser modificada más adelante.
 
 Si algunos de los campos introducidos a la hora de añadir al usuario son incorrectos, aparecerá el mensaje de error.
 
-#Búsqueda de paciente 
+# Búsqueda de paciente 
 **ID: 002**
 
 ### Descripción: Nuestro sistema permite encontrar a la persona deseada a base de introducir alguno de sus datos
