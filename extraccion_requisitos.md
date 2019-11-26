@@ -1,19 +1,43 @@
 # Documento de extracción de requisitos
 ## Partes interesadas
-Las partes interesadas serán los secretarios y doctores de una clinica, los cuales necesitan gestionar información de sus pacientes.
+
+Las partes interesadas serán:
+- El secretario.
+- La doctora de una clinica.
+- Desarrolladores del grupo 14.
 
 ## Datos almacenados
-Los secretarios y doctores necesitan que se almacenen los siguientes datos dentro de la aplicación:
 
+El secretario y la doctora necesita que se almacenen los siguientes datos dentro de la aplicación:
+
+- De los pacientes: 
   * Nombre y apellidos.
   * Dirección Postal.
   * Teléfono.
   * Fecha de nacimiento.
-  * Privado o por Mutua
-
+  * Privado o por Mutua.
+  * Citas.
+  * Tratamiento.
+  * Historial médico.
+  
+- Del tratamiento:
+  * Rutina.
+  * Medicación.
+  * Duración.
+  
+- Del historial: 
+  * Clase enfermedad.
+  * Fecha.
+  
+- De las citas:
+  * Fecha y hora.
+  * Duracion.
+  * Requisitos.
+  
 ## Requisitos funcionales
 
   * La aplicación debe poder realizar las siguientes acciones para todos los usuarios:
+    
     * Añadir un paciente nuevo
     * Modificar los datos de un paciente
     * Eliminar a un paciente
