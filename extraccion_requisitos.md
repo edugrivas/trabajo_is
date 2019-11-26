@@ -37,21 +37,25 @@ El secretario y la doctora necesita que se almacenen los siguientes datos dentro
 ## Requisitos funcionales
 
   * La aplicación debe poder realizar las siguientes acciones para todos los usuarios:
-    
-    * Añadir un paciente nuevo
-    * Modificar los datos de un paciente
-    * Eliminar a un paciente
-    * Concertar una cita
-    * Añadir una cita
-    * Ver historial médico pasado de un paciente
-    * Buscar un paciente
-  * Los pacientes serán buscados por Nombre y Apellidos.
-  * La aplicación debe poder mostrar información sobre un paciente en concreto por pantalla.
-  * La aplicación debe poder mostrar las citas de hoy con los siguientes campos:
-    * Paciente
-    * Día
-    * Hora de comienzo
-    * Hora de finalización
+
+  * Añadir nuevo paciente
+  * Añadir nueva cita
+  * Añadir nuevo tratamiento a paciente
+  * Añadir nueva entrada del historial.
+  * Mostrar citas
+  * Mostrar lista con pacientes
+  * Mostrar toda la información del paciente seleccionado
+  * Modificar paciente
+  * Modificar tratamiento
+  * Búsqueda por nombre (opcional: busqueda por otros campos)
+  * Borrar paciente
+  * Mover cita
+  * Cancelar cita
+  * Consultar citas de hoy
+  * Consultar citas de un paciente
+  * Consultar historial médico de un paciente
+  * Consultar tratamientos de un paciente
+
   
   
 
