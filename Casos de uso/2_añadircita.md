@@ -23,4 +23,4 @@
 
 **Flujos alternativos:**
 
-*Si  ya hay una cita prevista , da error.
+* Si  ya hay una cita prevista , da error.
