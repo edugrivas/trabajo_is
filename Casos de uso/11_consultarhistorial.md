@@ -1,6 +1,6 @@
 # Consultar el historial
 
-**ID:** 06
+**ID:** 11
 
 **Descripción:** Consulta el historial de un paciente.
 
