@@ -4,10 +4,11 @@
 
 **Descripción:** Se introduce el nombre y apellidos, el teléfono, el código postal, la fecha de nacimiento y la procedencia del nuevo paciente.
 
-**Actores principales:** Clínica
+**Actores principales:** Secretaria
+**Actores Secundarios:** Ninguno
 
 **Precondiciones:**
-* Ninguna
+* No debe haber otra persona registrada previamente con los mismos datos.
 
 **Flujo principal:**
 1. El administrador desea introducir un nuevo paciente.
