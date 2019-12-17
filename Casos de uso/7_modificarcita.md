@@ -1,6 +1,6 @@
 # Modificar una cita
 
-**ID:** 06
+**ID:** 07
 
 **Descripción:** Se actualiza la información de una cita.
 
