@@ -1,6 +1,6 @@
 # Consultar tratamiento
 
-**ID:** 06
+**ID:** 13
 
 **Descripción:** Se consulta el tratamiento de un paciente.
 
