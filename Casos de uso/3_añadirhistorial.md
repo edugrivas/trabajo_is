@@ -23,6 +23,6 @@
 
 **Flujos alternativos:**
 
-*Si ha habido un fallo al introducir los datos, aparece un mensaje de error.
-*Si no ha sido posible actualizar la información del historial del paciente , aparece un error.
+Si ha habido un fallo al introducir los datos, aparece un mensaje de error.
+Si no ha sido posible actualizar la información del historial del paciente , aparece un error.
 
