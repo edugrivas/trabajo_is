@@ -1,6 +1,6 @@
 # Busqueda de un paciente
 
-**ID:** 03
+**ID:** 05
 
 **Descripción:** Se busca en el sistema a un paciente a base de su DNI.
 
