@@ -18,7 +18,7 @@ public:
 	inline void setCantidaddiaria(string a){cantidaddiaria_=a;};
 	inline string getDuracion()const{return duracion_};
 	inline void setDuracion(string a){duracion_=a;};
-	inline string getDoctorquerecta()const { return doctorquereceta_;};
+	inline string getDoctorquereceta()const { return doctorquereceta_;};
 	inline void setDoctorquereceta(string a){doctorquereceta_=a;};
 
 };
