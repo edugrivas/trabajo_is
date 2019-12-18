@@ -2,7 +2,7 @@
 
 **ID:** 10
 
-**Descripción:** Consultar una cita del paciente deseado. º                                                    
+**Descripción:** Consultar una cita del paciente deseado.                                                   
 **Validacion:** 
 
 1. Si el paciente no existe mostrar error.
