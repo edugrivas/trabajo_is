@@ -1,5 +1,6 @@
 #ifndef TRATAMIENTO_H
 #define TRATAMIENTO_H
+#include <string>
 class Tratamiento {
 
 private:
