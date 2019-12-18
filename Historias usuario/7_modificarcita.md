@@ -1,6 +1,6 @@
 # Modificar una cita
 
-**ID:** 06
+**ID:** 07
 
 **Descripción:** Modificar la fecha y hora de una cita.
 **Validacion:** 
