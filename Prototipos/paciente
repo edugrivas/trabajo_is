@@ -26,3 +26,5 @@ public:
   void setCP(int a);
   void setFecha(string a);
   void setTelefono(string a);
+};
+#endif;
