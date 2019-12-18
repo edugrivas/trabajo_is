@@ -19,6 +19,7 @@ El secretario y la doctora necesita que se almacenen los siguientes datos dentro
   * Citas.
   * Tratamiento.
   * Historial médico.
+  * DNI.
   
 - Del tratamiento:
   * Rutina.
@@ -41,8 +42,7 @@ El secretario y la doctora necesita que se almacenen los siguientes datos dentro
   * Añadir nuevo paciente
   * Añadir nueva cita
   * Añadir nuevo tratamiento a paciente
-  * Añadir nueva entrada del historial.
-  * Mostrar citas
+  * Añadir nueva entrada del historial
   * Mostrar lista con pacientes
   * Mostrar toda la información del paciente seleccionado
   * Modificar paciente
