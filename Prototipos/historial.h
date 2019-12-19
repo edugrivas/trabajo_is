@@ -4,19 +4,27 @@
 #include <list>
 #include "tratamiento.h"
 #include "cita.h"
-class Historial {
+#include "paciente.h"
+#include <iostream>
+#include <fstream>
+using namespace std;
+class Historial{
 private:
-list <Cita> registrocitas_;
-list <Tratamiento> registrotratamientos_;
+  list <Cita> historialcitas_;
+  list <Tratamiento> historialtratamientos_;
+  int inicializer_;
 
 
 public:
-Historial();
-list <Cita> getCitas()const {return registrocitas_;};
-void setNuevacita(Cita aux);
-list <Tratamiento> getTratamientos()const {return registrotratamientos_;};
-void setNuevotratamiento(Tratamiento aux);
-void mostrarhistorial();
+Historial(int inicializer=0){inicializer_=inicializer;}
+ void leehistorialCitas();
+    void leehistorialTratamientos();
+    void escribehistorialTratamientos();
+    void escribehistorialCitas();
+    void addCitahistorial(Cita aux);
+    void addTratamientohistorial(Tratamiento aux);
+    void mostrarcitashistorial(string dni);
+    void mostrartratamientoshistorial(string dni);
 };
 
 
