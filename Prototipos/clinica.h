@@ -28,6 +28,7 @@ bool anadepaciente(string nombre1,string apellidos1, string DNI, string idhistor
     void escribeCitas();
     void mostrarcitasdepaciente(string dni);
     bool checkCita(string dni);
+    bool checkTratamiento(string dni);
     void mostrarpaciente2(string dni);
     int deletePaciente(Paciente a);
     int deleteCitas(Cita a);
@@ -36,6 +37,12 @@ bool anadepaciente(string nombre1,string apellidos1, string DNI, string idhistor
     void addTratamiento(Tratamiento aux);
     void escribeTratamientos();
     void leeTratamientos();
+    void mostrartratamientosdepaciente(string dni);
+
+    //Modificar citas y tratamientos
+    int borracita(string cod);
+    int borratratamiento(string dni,string medicamento);
+    bool anadepaciente2(string nombre1,string apellidos1, string DNI, string idhistorial,string fech,int cp, string telf);
 
 };
 
