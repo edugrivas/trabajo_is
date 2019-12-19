@@ -1,7 +1,8 @@
 #include "tratamiento.h"
-Tratamiento::Tratamiento(int codigo,int cantidaddiaria,int duracion, string doctorquereceta){
-codigo_=codigo;
+Tratamiento::Tratamiento(string dni,int cantidaddiaria,string duracion, string doctorquereceta,string medicamento){
+dni_=dni;
 cantidaddiaria_=cantidaddiaria;
 duracion_=duracion;
 doctorquereceta_=doctorquereceta;
+medicamento_=medicamento;
 }
