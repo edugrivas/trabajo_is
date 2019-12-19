@@ -25,7 +25,6 @@ ofstream f1("BaseDeDatos.txt"); //Abro el fichero para escribir
 void ListaPaciente::mostrarpacientes(){
 	list <Paciente> :: iterator j;
 	cout<<"\n\n";
-cout<<"Nombre"<<"\t"<<"Apellidos"<<"\t  "<<"DNI  "<<"\t"<<"   Fecha de nacimiento"<<"\t"<<"Codigo Postal"<<"\t"<<"Telefono"<<"\n";
 for(j=pacientes_.begin(); j!=pacientes_.end(); j++){
 	mostrarpaciente2((*j).getDNI());
 }
@@ -36,7 +35,7 @@ void ListaPaciente::mostrarpaciente2(string dni){
 list <Paciente> :: iterator j;
 for(j=pacientes_.begin(); j!=pacientes_.end(); j++){
 	if((*j).getDNI()==dni){ 
-cout<<(*j).getNombre()<<"\t"<<(*j).getApellidos()<<"\t"<<"       "<<(*j).getDNI()<<"\t"<<(*j).getFecha()<<"\t            "<<(*j).getCP()<<"\t  "<<(*j).getTelefono()<<endl;
+cout<<"Nombre:      "<<(*j).getNombre()<<"      Apellidos:      "<<(*j).getApellidos()<<"      DNI:       "<<(*j).getDNI()<<"      Fecha de nacimiento:      "<<(*j).getFecha()<<"       Codigo Postal:     "<<(*j).getCP()<<"      Telefono:     "<<(*j).getTelefono()<<endl;
 	}
 }
 }
@@ -107,11 +106,10 @@ return 0;
 
 void ListaPaciente::mostrarpaciente(string dni){
    	cout<<"\n\n";
-cout<<"Nombre"<<"\t"<<"Apellidos"<<"\t  "<<"DNI  "<<"\t"<<"   Fecha de nacimiento"<<"\t"<<"Codigo Postal"<<"\t"<<"Telefono"<<"\n";
 list <Paciente> :: iterator j;
 for(j=pacientes_.begin(); j!=pacientes_.end(); j++){
 	if((*j).getDNI()==dni){ 
-cout<<(*j).getNombre()<<"\t"<<(*j).getApellidos()<<"\t"<<"       "<<(*j).getDNI()<<"\t"<<(*j).getFecha()<<"\t            "<<(*j).getCP()<<"\t  "<<(*j).getTelefono()<<endl;
+cout<<"Nombre:      "<<(*j).getNombre()<<"     Apellidos:      "<<(*j).getApellidos()<<"     DNI:       "<<(*j).getDNI()<<"     Fecha de nacimiento:      "<<(*j).getFecha()<<"     Codigo Postal:     "<<(*j).getCP()<<"     Telefono:     "<<(*j).getTelefono()<<endl;
 	}
 }
 
@@ -170,6 +168,15 @@ ofstream f1("CitasClinica.txt"); //Abro el fichero para escribir
 
 	f1.close();
 }
+    bool ListaPaciente::checkTratamiento(string dni){
+list <Tratamiento> :: iterator j;
+for(j=listatratamientos_.begin(); j!=listatratamientos_.end(); j++){
+	if((*j).getDNI()==dni){ return 1;}
+}
+return 0;
+
+
+    }
 
  bool ListaPaciente::checkCita(string dni){
 list <Cita> :: iterator j;
@@ -181,16 +188,31 @@ return 0;
 
    }
 
+  void ListaPaciente::mostrartratamientosdepaciente(string dni){
+	if(checkTratamiento(dni)==1){
+   	cout<<"\n\n";
+list <Tratamiento> :: iterator j;
+for(j=listatratamientos_.begin(); j!=listatratamientos_.end(); j++){
+	if((*j).getDNI()==dni){ 
+cout<<"DNI:     "<<(*j).getDNI()<<"     Cantidad diaria:       "<<(*j).getCantidaddiaria()<<"     Duracion:            "<<(*j).getDuracion()<<"    Doctor:         "<<(*j).getDoctorquereceta()<<"     Medicamento:           "<<(*j).getMedicamento()<<endl;
+	}
+}
+						}
+						else cout<<"No tiene tratamientos este paciente\n";
+}
 
+
+
+  
 
 void ListaPaciente::mostrarcitasdepaciente(string dni){
 	if(checkCita(dni)==1){
    	cout<<"\n\n";
-cout<<"Codigo"<<"\t"<<"Fecha"<<"\t  "<<" Hora  "<<"\t"<<"   DNI"<<"\t"<<"                Doctor"<<endl;
 list <Cita> :: iterator j;
 for(j=listacitas_.begin(); j!=listacitas_.end(); j++){
 	if((*j).getDNI()==dni){ 
-cout<<(*j).getCodigo()<<"\t"<<(*j).getFecha()<<"\t"<<"     "<<(*j).getHora()<<"\t"<<(*j).getDNI()<<"\t        "<<(*j).getDoctor()<<endl;
+cout<<"Codigo:    "<<(*j).getCodigo()<<"    Fecha:     "<<(*j).getFecha()<<"    Hora:      "<<(*j).getHora()<<"   DNI:     "<<(*j).getDNI()<<"    Doctor:     "<<(*j).getDoctor()<<endl;
+
 	}
 }
 						}
@@ -244,9 +266,12 @@ cout<<(*j).getCodigo()<<"\t"<<(*j).getFecha()<<"\t"<<"     "<<(*j).getHora()<<"\
 void ListaPaciente::addCita(Cita aux){
 
 	listacitas_.push_back(aux);
+	
+
 }
    void ListaPaciente::addTratamiento(Tratamiento aux){
    	listatratamientos_.push_back(aux);
+ 
    }
 
 
@@ -304,4 +329,42 @@ ofstream f1("TratamientosClinica.txt"); //Abro el fichero para escribir
 	}
 
 	f1.close();
+}
+
+int ListaPaciente::borracita(string cod)
+{
+	if(listacitas_.empty()==1) return -1;
+
+
+	list <Cita> :: iterator i;      
+	for(i=listacitas_.begin() ; i != listacitas_.end() ; i++) {
+		if((*i).getCodigo() == cod){
+			listacitas_.erase(i);	 //Mismo funcionamiento que el anterior	
+		return 2;
+		}
+	}
+
+	return 1;	
+}
+
+int ListaPaciente::borratratamiento(string dni,string medicamento)
+{
+	if(listatratamientos_.empty()==1) return -1;
+
+
+	list <Tratamiento> :: iterator i;      
+	for(i=listatratamientos_.begin() ; i != listatratamientos_.end() ; i++) {
+		if(((*i).getDNI() == dni)&&((*i).getMedicamento()==medicamento)){
+			listatratamientos_.erase(i);	 //Mismo funcionamiento que el anterior	
+		return 2;
+		}
+	}
+
+	return 1;	
+}
+
+ bool ListaPaciente::anadepaciente2(string nombre1,string apellidos1, string DNI, string idhistorial,string fech,int cp, string telf){
+Paciente aux(nombre1,apellidos1,DNI,idhistorial,fech,cp,telf);
+if(aux.getNombre()==nombre1){ addPaciente(aux); return 1;}
+else return 0;
 }
