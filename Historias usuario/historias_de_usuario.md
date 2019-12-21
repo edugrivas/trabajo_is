@@ -10,7 +10,7 @@
 	- prioridad: 1
 	
 ## Búsqueda de paciente
-	- Como doctor quiero buscar pacientes y poder si ha tenido citas antes.
+	- Como doctor quiero buscar pacientes y poder saber si ha tenido citas antes.
 	- prioridad: 2
 ### Reverso
 	- La búsqueda se hará según el nombre y el apellido
