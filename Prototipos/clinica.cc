@@ -368,3 +368,22 @@ Paciente aux(nombre1,apellidos1,DNI,idhistorial,fech,cp,telf);
 if(aux.getNombre()==nombre1){ addPaciente(aux); return 1;}
 else return 0;
 }
+
+
+
+
+
+
+void ListaPaciente::mostrarcitasdiarias(string fecha){
+	int lol=0; //contador
+   	cout<<"\n\n";
+list <Cita> :: iterator j;
+for(j=listacitas_.begin(); j!=listacitas_.end(); j++){
+	if((*j).getFecha()==fecha){ 
+cout<<"Codigo:    "<<(*j).getCodigo()<<"    Fecha:     "<<(*j).getFecha()<<"    Hora:      "<<(*j).getHora()<<"   DNI:     "<<(*j).getDNI()<<"    Doctor:     "<<(*j).getDoctor()<<endl;
+
+	lol++;
+}
+						}
+						if(lol==0){cout<<"No hay citas en el dicho dia\n";}
+}
