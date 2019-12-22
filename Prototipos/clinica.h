@@ -43,7 +43,7 @@ bool anadepaciente(string nombre1,string apellidos1, string DNI, string idhistor
     int borracita(string cod);
     int borratratamiento(string dni,string medicamento);
     bool anadepaciente2(string nombre1,string apellidos1, string DNI, string idhistorial,string fech,int cp, string telf);
-
+    void mostrarcitasdiarias(string fecha);
 };
 
 
