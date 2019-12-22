@@ -22,23 +22,24 @@ constante.leehistorialCitas();          //Historial independiente
 constante.leehistorialTratamientos();
 while(x!=6){
 cout<<"MENU INTERFAZ DE LA CLINICA"<<endl;
-cout<<"_____________________________________"<<endl;
-cout<<"_____________________________________"<<endl;
+cout<<endl;
+cout<<endl;
 cout<<"1.Anadir paciente a la base de datos"<<endl;
 cout<<"2.-Buscar paciente en la base de datos"<<endl;
 cout<<"3.-Consultar cita medica"<<endl;               //interfaz ciclica
 cout<<"4.-Seleccionar paciente"<<endl;
 cout<<"5.-Listado de todos los pacientes"<<endl;
 cout<<"6.-Salir del programa"<<endl;
-cout<<"_____________________________________"<<endl;
-cout<<"_____________________________________"<<endl;
+cout<<"7.-Mostrar citas diarias"<<endl;
+cout<<endl;
+cout<<endl;
 cin>>x;
-system("clear");
 if(x==1){
 string nombre1,apellidos1,DNI,aux5; //variables add paciente
 string idhistorial;   //id paciente
 cout<<"Introduce el nombre del paciente"<<endl;
 cin>>nombre1;
+fflush(stdin);
 cout<<"Introduce los apellidos del paciente"<<endl; //parametros obligatorios
 getline(cin,apellidos1);
 cout<<"Introduce el dni del paciente"<<endl;
@@ -47,8 +48,6 @@ aux5=DNI.substr(3,2);
 idhistorial=aux5;  //un simple id
 if(1!=aux3.anadepaciente(nombre1,apellidos1,DNI,idhistorial)){cout<<"error"<<endl;}
 else cout<<"Paciente anadido con exito"<<endl;
-system("wait");
-system("clear");
 }
 if(x==2)
 {
@@ -81,6 +80,12 @@ cout<<"\n\n\n";
 
 
 }
+if(x==7)
+{ string fecha1;
+	cout<<"Introduce la fecha asi: XX/XX/XXXX"<<endl;
+	cin>>fecha1;
+aux3.mostrarcitasdiarias(fecha1);
+}
 
 
 
@@ -92,7 +97,6 @@ if(x==4){
 int aux2=0;
 cout<<"Indique el DNI del paciente"<<endl;
 cin>>aux6;   //Guardo el dni
-system("clear");
 if(aux3.checkDNI(aux6)==1)  //compruebo que existe en la base de datos
 								{
 
@@ -100,8 +104,8 @@ if(aux3.checkDNI(aux6)==1)  //compruebo que existe en la base de datos
 while(aux2!=7)
 {
 cout<<"Panel de control del paciente :    "<<aux6<<endl;
-cout<<"_______________________________________________"<<endl;
-cout<<"_______________________________________________"<<endl;
+cout<<endl;
+cout<<endl;
 cout<<"1.-Anadir tratamiento"<<endl;
 cout<<"2.-Anadir cita medica"<<endl;
 cout<<"3.-Ver historial medico"<<endl;
@@ -110,10 +114,9 @@ cout<<"5.-Ver tratamientos"<<endl;
 cout<<"0.-Modificar datos del paciente"<<endl;
 cout<<"6.-Eliminar paciente de la base de datos"<<endl;
 cout<<"7.-Volver atras"<<endl;
-cout<<"_______________________________________________"<<endl;
-cout<<"_______________________________________________"<<endl;
+cout<<endl;
+cout<<endl;
 cin>>aux2;
-system("clear");
 if(aux2==6){
 	int error;
 	Paciente paciente("hola","hola",aux6,"hola");
@@ -238,4 +241,3 @@ aux3.escribeTratamientos();
 
 return 0;
 }
-
