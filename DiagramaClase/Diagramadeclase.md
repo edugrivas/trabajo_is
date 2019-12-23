@@ -34,6 +34,7 @@ setTelefono() | Esta funcion hace de modificador del parametro Telefono.
 
 ## **Clase citas**
 La clase citas contendrá las citas de todos los pacientes a la hora que se realizan, cuanto duran y el doctor que las lleva a cabo.
+
 **Datos**
 
 Nombre | Tipo | Descripción
