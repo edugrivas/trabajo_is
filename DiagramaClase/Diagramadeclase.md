@@ -125,5 +125,29 @@ contadorpacientes | int |  Guarda el valor de un contador de pacientes de la cl�
 
 Función | Descripción
 -- | :--
-escribePacientes() | .
+escribePacientes() | Guarda los pacientes en la base de datos.
+leePacientes() | Recoge la información de los pacientes de la base de datos.
+addPaciente() | Añade un paciente a la base de datos.
+anadepaciente() | Utiliza addPaciente, es un auxiliar.
+checkDNI() | Comprueba la igualdad de un DNI.
+mostrarpaciente() | Muestra un paciente en la interfaz.
+mostrarpacientes() | Muestra todos los pacientes en la interfaz.
+leeCitas() | Recoge la información de las citas de los pacientes de la base de datos.
+escribeCitas() | Almacena las citas de los pacientes en la base de datos.
+mostrarcitasdepaciente() | Muestra las citas de un paciente X a través de su DNI.
+checkCita() | Comprueba la igualdad de una cita.
+checkTratamiento() | Comprueba la igualdad de un tratamiento.
+mostrarpaciente2() | Variante que se ajusta a otra zona de la interfaz pero que en esencia es lo mismo que mostrarpaciente().
+deletePaciente() | Borra un paciente de la base de datos.
+deleteCitas() | Borra las citas de un paciente de la base de datos.
+deleteTratamientos() | Borra tratamientos de un paciente de la base de datos.
+addCita() | Añade una cita a un paciente en la base de datos.
+addTratamiento() | Añade un tratamiento a un pacienten...
+escribeTratamientos() | Recoge los tratamientos de los pacientes de la base de datos.
+leeTratamientos() | Guarda los tratamientos de los pacientes en la base de datos.
+mostrartratamientosdepaciente() | Muestra los tratamientos de un paciente en la interfaz.
+borracita() | Borra una cita concreta.
+borratratamiento() | Borra un tratamiento concreto.
+anadepaciente2() | Variante para añadir un paciente.
+mostrarcitasdiarias() | Muestra las citas del dia seleccionado.
 
