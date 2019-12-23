@@ -1,4 +1,4 @@
-## **Clase pacientes**
+## **Clase paciente**
 La clase paciente contendra los pacientes y sus datos.
 
 **Datos**
@@ -33,74 +33,97 @@ setFecha() | Esta funcion hace de modificador del parametro Fecha.
 setTelefono() | Esta funcion hace de modificador del parametro Telefono.
 
 ## **Clase citas**
-La clase citas almacena las citas de los pacientes que se encuentran en la base de datos. Un paciente puede tener varías citas. Si un paciente es eliminado las citas de estos pacientes también serán eliminadas. No pueden haber dos citas con la misma fecha y hora. En esta clase se encuentran incluidas las funciones que puede realizar el usuario respecto a las citas.
-
+La clase citas contendrá las citas de todos los pacientes a la hora que se realizan, cuanto duran y el doctor que las lleva a cabo.
 **Datos**
 
 Nombre | Tipo | Descripción
 -- | :--: | :--
-Id_Cita | int | Este campo es el identificador de la clase citas. Como identificador este tiene que ser único para cada cita.
-Fecha | string | Este campo guarda la fecha en la que va a llevarse a cabo la cita de tal modo que quede día/mes/año. Ejemplo: 12/03/2020. Este campo es obligatorio.
-Hora | string | Este campo guarda la hora en digital en la que va a llevarse a cabo la cita. Ejemplo: 17:30. Este campo es obligatorio.
-Duración | string | En este campo se guarda al final de la cita el tiempo que durará esta en minutos. Ejemplo: 10.
+codigo | int | Guarda el identificador de las citas y es único.
+Fecha | string | Guarda la fehca de la cita de tal modo: día/mes/año. Ejemplo: 28/12/2019.
+Hora | string | Guarda la hora de la cita. Ejemplo: 18:00.
+DNI | string | Guarda el dni del paciente de tal modo: XXXXXXXXA. Ejemplo:31875329Z.
+Doctor | string | Guarda el doctor que llevara a cabo la cita.
 
 **Métodos**
 
 Función | Descripción
 -- | :--
-Consultar_Citas_Diarias() | Esta función accede a la base de datos, busca todas las citas cuya fecha coincide con la fecha actual del sistema y las muestra al usuario.
-Consultar_Citas_Paciente() | Esta función accede a la base de datos, busca todas las citas de un único paciente y las muestra al usuario.
-Añadir_Cita() | Esta función le pide al usuario los datos de una cita, después se comprueba de que no haya otra cita en esa fecha y esa hora. En caso de que ya haya una cita se mostrará un mensaje de error, en caso contrario se guardará la cita. No se puede añadir una cita que sea anterior a la fecha del sistema.
-Modificar_Cancelar_Cita() | Esta función le permite al usuario elegir si desea modificar o cancelar una cita. En caso de que desee modificar una cita le pedirá los datos necesarios para ello y después de comprobar que estén correctos se guardan. En caso de que se desee cancelar una cita se le preguntará al usuario si está seguro y si es que sí esta se eliminará de la base de datos. No se podrán modificar ni cancelar una cita cuya fecha sea anterior a la fecha del sistema.
+getCodigo() | Esta funcion hace de observador del parametro Codigo.
+getFecha() | Esta funcion hace de observador del parametro Fecha.
+getHora() | Esta funcion hace de observador del parametro Hora.
+getDNI() | Esta funcion hace de observador del parametro Dni.
+getDoctor() | Esta funcion hace de observador del parametro Doctor.
+setCodigo() | Esta funcion hace de modificador del parametro Codigo.
+setFecha() | Esta funcion hace de modificador del parametro Fecha.
+setHora() | Esta funcion hace de modificador del parametro Hora.
+setDni() | Esta funcion hace de modificador del parametro Dni.
+setDoctor() | Esta funcion hace de modificador del parametro Doctor.
 
-## **Clase tratamiento médico**
-Esta clase almacena los tratamientos que ha seguido o está siguiendo el paciente. Si el paciente es borrado de la base de datos los tratamientos de este también serán borrados. En esta clase se encuentran las funciones que permiten manejar los tratamientos médicos.
+
+## **Clase Tratamiento**
+La clase tratamiento contendra los tratamientos de los pacientes y todos los datos necesarios de estos tratamientos.
 
 **Datos**
 
 Nombre | Tipo | Descripción
 -- | :--: | :--
-Id_Tratamiento_Medico | int | Este campo es el identificador de la clase tratamiento médico. Como identificador este tiene que ser único para cada tratamiento.
-Medicamento | string | Este campo almacena el nombre del medicamento o tratamiento que debe seguir el paciente. Este campo es obligatorio.
-Concentración | float | Este campo almacena la dosis que debe de tomar.
-Regularidad | int | Este campo almacena el número de veces que debe de tomar el medicamento al día.
-Fecha de inicio | string | Este campo guarda la fecha de inicio del tratamiento de tal modo que quede día/mes/año. Ejemplo: 10/12/2019. Este dato es obligatorio.
-Estado | string | Este campo almacena el estado en el que se encuentra el tratamiento. Solo puede ser "En curso" y "Finalizado". Este dato es obligatorio.
-Notas | string | Este campo almacena un mensaje que puede poner el usuario con respecto al tratamiento a seguir.
+Dni | string | Guarda el dni del paciente.
+Cantidaddiaria | string | Guarda la porcion de medicamento que tiene que tomar el paciente.
+Duracion | string | Guarda la duracion de tiempo en que se lleva a cabo el tratamiento.
+Doctorquereceta | string | Guarda el nombre del doctor que receta el tratamiento.
+Medicamento | string | Guarda el medicamento que debe tomar el paciente.
 
 **Métodos**
 
 Función | Descripción
 -- | :--
-Consultar_Tratamiento() | Esta función accede a la base de datos y muestra los tratamientos de un paciente.
-Añadir_Tratamiento() | Esta función pide al usuario los datos necesarios para crear un nuevo tratamiento.
-Modificar_Eliminar_Tratamiento() | Esta función permite al usuario elegir entre modificar y eliminar un tratamiento médico. Si desea eliminar un tratamiento médico el sistema preguntará al usuario si está seguro que desea borrarlo antes de hacerlo. Si desea modificar un tratamiento médico se le pedirán los nuevos datos al usuario y después se guardarán en la base de datos.
+getDNI() | Esta funcion hace de observador del parametro DNI.
+getCantidaddiaria() | Esta funcion hace de observador del parametro Cantidadiaria.
+getDuracion() | Esta funcion hace de observador del parametro Duracion.
+getDoctorquereceta() | Esta funcion hace de observador del parametro Doctorquereceta.
+getMedicamento() | Esta funcion hace de observador del parametro Medicamento.
+setDNI() | Esta funcion hace de modificador del parametro DNI. 
+setCantidaddiaria() | Esta funcion hace de modificador del parametro cantidaddiaria.
+setDuracion() | Esta funcion hace de modificador del parametro Duracion.
+setDoctorquereceta() | Esta funcion hace de modificador del parametro Doctorquereceta.
+setMedicamento() | Esta funcion hace de modificador del parametro Medicamento.
 
-## **Clase historial médico**
-Esta clase guarda el historial médico de cada paciente. Es la única clase que no es borrada aunque el paciente si sea eliminado de la base de datos. Esta clase se crea automáticamente cuando se crea un paciente. En esta clase se encuentran las funciones que permiten manejar el historial médico.
+
+## **Clase historial**
+La clase historial guarda el historial medico del paciente.
 
 **Datos**
 
 Nombre | Tipo | Descripción
 -- | :--: | :--
-Id_Historial_Medico | int | Este campo es el identificador de la clase historial médico. Como identificador este tiene que ser único para historial médico.
-Fecha de alta | string | Este campo guarda la fecha del sistema en el momento en el que el paciente se registró en la base de datos de tal modo que quede día/mes/año. Ejemplo: 24/09/2010.
+inicializer | int | Guarda el valor de inicio.
 
 **Métodos**
 
 Función | Descripción
 -- | :--
-Consultar_Historial_Medico() | Esta función accede a la base de datos y muestra todas las lineas del historial médico de un paciente. En caso de que no tenga ninguna línea se muestra un mensaje.
-Añadir_Historial_Medico() | Esta función le pide datos al usuario sobre la línea del historial médico que va a añadir, la fecha es la del sistema. Una vez estén todos los datos correctos se pedirá confirmación ya que es un cambio irreversible.
+leehistorialcitas() | Esta funcion lee el historial de citas del paciente.
+escribehistorialTratamientos() | Esta función escribe el historial de tratamientos del paciente.
+escribehistorialCitas() | Esta funcion escribe el historial de citas del paciente.
+addCitahistorial() | Esta funcion añade una cita al historial medico del paciente.
+addTratamientohistorial() | Esta funcion añade un tratamiento al historial medico del paciente.
+mostrarcitashistorial() | Esta funcion muestra las citas del historial médico del paciente.
+mostrartratamientoshistorial() | Esta funcion muestra los tratamientos del historial medico del paciente.
 
-## **Clase líneas del historial médico**
-Esta clase almacena las líneas de cada historial médico. El historial médico no puede ser borrado por lo que las líneas tampoco. No se pueden modificar una vez se crean.
+
+
+## **Clase clínica**
+La clase clínica
 
 **Datos**
 
 Nombre | Tipo | Descripción
 -- | :--: | :--
-Número_Línea | int |  Este campo es el identificador de la clase líneas del historial médico. Como identificador este tiene que ser único para cada línea de cada historial médico.
-Comentario | string | Este campo almacena un mensaje escrito por el usuario sobre la enfermedad, lesión o similares del paciente. Este campo es obligatorio.
-Fecha | string | Este campo almacena la fecha del sistema en el momento en el que se escribe la línea de tal modo que quede día/mes/año. Ejemplo: 06/11/2019.
+contadorpacientes | int |  Guarda el valor de un contador de pacientes de la clínica.
+
+**Métodos**
+
+Función | Descripción
+-- | :--
+escribePacientes() | .
 
