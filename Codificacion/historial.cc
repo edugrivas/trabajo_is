@@ -1,13 +1,17 @@
 #include "historial.h"
-void Historial::addCitahistorial(Cita aux){
+
+void Historial::addCitahistorial(Cita aux)
+{
 
 	historialcitas_.push_back(aux);
 
 }
-   void Historial::addTratamientohistorial(Tratamiento aux){
+   void Historial::addTratamientohistorial(Tratamiento aux)
+   {
 
    	historialtratamientos_.push_back(aux);
    }
+
 
 void Historial::leehistorialCitas()
 {
@@ -21,6 +25,7 @@ char doctor[20];
 
 
 ifstream file;
+	
 file.open("HistorialCitas.txt"); //Abro el fichero para leer
 if(file.is_open()){//Si el fichero efectivamente se abrió...
 while(file.getline(codigo,20,',')){//Mientras se pueda obtener datos...
@@ -33,16 +38,18 @@ while(file.getline(codigo,20,',')){//Mientras se pueda obtener datos...
 	auxt.setHora(hora);
 	auxt.setFecha(fecha);
 	auxt.setDoctor(doctor);
-	//P4
 	
-	//P4
+	
+	
 	historialcitas_.push_back(auxt);  //Lo meto en la lista
 }
 }
 file.close();
 }
 
-void Historial::escribehistorialCitas(){
+
+void Historial::escribehistorialCitas()
+{
 ofstream f1("HistorialCitas.txt"); //Abro el fichero para escribir
 
 	list <Cita> :: iterator asu;
@@ -84,9 +91,9 @@ while(file.getline(dni,20,',')){//Mientras se pueda obtener datos...
 	auxt.setDuracion(duracion);
 	auxt.setDoctorquereceta(doctorquereceta);
 	auxt.setMedicamento(medicamento);
-	//P4
 	
-	//P4
+	
+	
 	historialtratamientos_.push_back(auxt);  //Lo meto en la lista
 }
 }
@@ -94,7 +101,8 @@ file.close();
 }
 
 
-void Historial::escribehistorialTratamientos(){
+void Historial::escribehistorialTratamientos()
+{
 ofstream f1("HistorialTratamientos.txt"); //Abro el fichero para escribir
 
 	list <Tratamiento> :: iterator ja;
@@ -111,7 +119,8 @@ ofstream f1("HistorialTratamientos.txt"); //Abro el fichero para escribir
 
 
 
-void Historial::mostrarcitashistorial(string dni){
+void Historial::mostrarcitashistorial(string dni)
+{
    	cout<<"\n\n";
 list <Cita> :: iterator kas;
 for(kas=historialcitas_.begin(); kas!=historialcitas_.end(); kas++){
@@ -122,7 +131,8 @@ cout<<"Codigo:    "<<(*kas).getCodigo()<<"    Fecha:     "<<(*kas).getFecha()<<"
 					
 }
 
-void Historial::mostrartratamientoshistorial(string dni){
+void Historial::mostrartratamientoshistorial(string dni)
+{
 	cout<<"\n\n";
 	list <Tratamiento> :: iterator da;
 	for(da=historialtratamientos_.begin(); da!=historialtratamientos_.end(); da++){
