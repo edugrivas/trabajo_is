@@ -1,5 +1,6 @@
 #include "clinica.h"
-bool ListaPaciente::anadepaciente(string nombre1,string apellidos1, string DNI, string idhistorial){
+bool ListaPaciente::anadepaciente(string nombre1,string apellidos1, string DNI, string idhistorial)
+{
 Paciente aux(nombre1,apellidos1,DNI,idhistorial);
 if(aux.getNombre()==nombre1){ addPaciente(aux); return 1;}
 else return 0;
@@ -22,6 +23,10 @@ ofstream f1("BaseDeDatos.txt"); //Abro el fichero para escribir
 	f1.close();
 }
 
+
+
+
+
 void ListaPaciente::mostrarpacientes(){
 	list <Paciente> :: iterator j;
 	cout<<"\n\n";
@@ -31,7 +36,9 @@ for(j=pacientes_.begin(); j!=pacientes_.end(); j++){
 
 
 }
-void ListaPaciente::mostrarpaciente2(string dni){
+
+void ListaPaciente::mostrarpaciente2(string dni)
+{
 list <Paciente> :: iterator j;
 for(j=pacientes_.begin(); j!=pacientes_.end(); j++){
 	if((*j).getDNI()==dni){ 
@@ -77,9 +84,9 @@ while(file.getline(nombre,20,',')){//Mientras se pueda obtener datos...
 	aux.setApellidos(apellidos);
 	aux.setFecha(fechanacimiento);
 	aux.setTelefono(telefono);
-	//P4
 	
-	//P4
+	
+	
 	pacientes_.push_back(aux);  //Lo meto en la lista
 }
 }
@@ -104,7 +111,8 @@ return 0;
 
 
 
-void ListaPaciente::mostrarpaciente(string dni){
+void ListaPaciente::mostrarpaciente(string dni)
+{
    	cout<<"\n\n";
 list <Paciente> :: iterator j;
 for(j=pacientes_.begin(); j!=pacientes_.end(); j++){
@@ -144,9 +152,9 @@ while(file.getline(codigo,20,',')){//Mientras se pueda obtener datos...
 	aux.setHora(hora);
 	aux.setFecha(fecha);
 	aux.setDoctor(doctor);
-	//P4
 	
-	//P4
+	
+	
 	listacitas_.push_back(aux);  //Lo meto en la lista
 }
 }
@@ -154,7 +162,9 @@ file.close();
 }
 
 
-void ListaPaciente::escribeCitas(){
+
+void ListaPaciente::escribeCitas()
+{
 ofstream f1("CitasClinica.txt"); //Abro el fichero para escribir
 
 	list <Cita> :: iterator i;
@@ -175,20 +185,25 @@ for(j=listatratamientos_.begin(); j!=listatratamientos_.end(); j++){
 }
 return 0;
 
-
     }
 
- bool ListaPaciente::checkCita(string dni){
+
+
+
+ bool ListaPaciente::checkCita(string dni)
+ {
 list <Cita> :: iterator j;
 for(j=listacitas_.begin(); j!=listacitas_.end(); j++){
 	if((*j).getDNI()==dni){ return 1;}
 }
 return 0;
 
-
    }
 
-  void ListaPaciente::mostrartratamientosdepaciente(string dni){
+
+
+  void ListaPaciente::mostrartratamientosdepaciente(string dni)
+  {
 	if(checkTratamiento(dni)==1){
    	cout<<"\n\n";
 list <Tratamiento> :: iterator j;
@@ -205,7 +220,8 @@ cout<<"DNI:     "<<(*j).getDNI()<<"     Cantidad diaria:       "<<(*j).getCantid
 
   
 
-void ListaPaciente::mostrarcitasdepaciente(string dni){
+void ListaPaciente::mostrarcitasdepaciente(string dni)
+{
 	if(checkCita(dni)==1){
    	cout<<"\n\n";
 list <Cita> :: iterator j;
@@ -233,6 +249,9 @@ cout<<"Codigo:    "<<(*j).getCodigo()<<"    Fecha:     "<<(*j).getFecha()<<"    
 
 	return 1;	
 }
+
+
+
     int ListaPaciente::deleteCitas(Cita a)
 {
 	if(listacitas_.empty()==1) return -1;
@@ -263,13 +282,16 @@ cout<<"Codigo:    "<<(*j).getCodigo()<<"    Fecha:     "<<(*j).getFecha()<<"    
 	return 1;	
 }
 
-void ListaPaciente::addCita(Cita aux){
+void ListaPaciente::addCita(Cita aux)
+{
 
 	listacitas_.push_back(aux);
 	
 
 }
-   void ListaPaciente::addTratamiento(Tratamiento aux){
+
+   void ListaPaciente::addTratamiento(Tratamiento aux)
+   {
    	listatratamientos_.push_back(aux);
  
    }
@@ -306,9 +328,9 @@ while(file.getline(dni,20,',')){//Mientras se pueda obtener datos...
 	aux.setDuracion(duracion);
 	aux.setDoctorquereceta(doctorquereceta);
 	aux.setMedicamento(medicamento);
-	//P4
 	
-	//P4
+	
+	
 	listatratamientos_.push_back(aux);  //Lo meto en la lista
 }
 }
@@ -316,7 +338,8 @@ file.close();
 }
 
 
-void ListaPaciente::escribeTratamientos(){
+void ListaPaciente::escribeTratamientos()
+{
 ofstream f1("TratamientosClinica.txt"); //Abro el fichero para escribir
 
 	list <Tratamiento> :: iterator i;
@@ -330,6 +353,8 @@ ofstream f1("TratamientosClinica.txt"); //Abro el fichero para escribir
 
 	f1.close();
 }
+
+
 
 int ListaPaciente::borracita(string cod)
 {
@@ -363,7 +388,8 @@ int ListaPaciente::borratratamiento(string dni,string medicamento)
 	return 1;	
 }
 
- bool ListaPaciente::anadepaciente2(string nombre1,string apellidos1, string DNI, string idhistorial,string fech,int cp, string telf){
+ bool ListaPaciente::anadepaciente2(string nombre1,string apellidos1, string DNI, string idhistorial,string fech,int cp, string telf)
+ {
 Paciente aux(nombre1,apellidos1,DNI,idhistorial,fech,cp,telf);
 if(aux.getNombre()==nombre1){ addPaciente(aux); return 1;}
 else return 0;
@@ -374,7 +400,8 @@ else return 0;
 
 
 
-void ListaPaciente::mostrarcitasdiarias(string fecha){
+void ListaPaciente::mostrarcitasdiarias(string fecha)
+{
 	int lol=0; //contador
    	cout<<"\n\n";
 list <Cita> :: iterator j;
